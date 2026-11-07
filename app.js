@@ -27,10 +27,10 @@ form.addEventListener('submit', async event => {
     const result = await response.json();
     if (!result.ok) throw new Error('rejected');
     form.reset();
-    showStatus('به لیست انتظار چتیو خوش اومدی! به‌زودی خبرت می‌کنیم.', 'success');
-    label.textContent = 'ثبت شد، منتظر خبرمون باش!';
+    showStatus('ثبت شد؛ به‌محض شروع چتیو خبرت می‌کنیم.', 'success');
+    label.textContent = 'ثبت‌نام انجام شد';
   } catch {
-    showStatus('تأیید ثبت‌نام دریافت نشد. لطفاً دوباره تلاش کن؛ ثبت تکراری ایجاد نمی‌شه.', 'error');
+    showStatus('ثبت‌نام انجام نشد. لطفاً دوباره تلاش کن.', 'error');
     label.textContent = 'تلاش دوباره';
   } finally { busy = false; button.disabled = false; form.removeAttribute('aria-busy'); }
 });
