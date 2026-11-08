@@ -27,7 +27,7 @@ form.addEventListener('submit', async event => {
     const result = await response.json();
     if (!result.ok) throw new Error('rejected');
     form.reset();
-    showStatus('ثبت شد! به‌محض شروع چتیو، دسترسی رایگان می‌گیری.', 'success');
+    showStatus('ثبت‌نامت انجام شد! وقتی چتیو آماده شد، برای دسترسی رایگان بهت خبر می‌دیم.', 'success');
     label.textContent = 'ثبت‌نام انجام شد';
   } catch {
     showStatus('ثبت‌نام انجام نشد. لطفاً دوباره تلاش کن.', 'error');
